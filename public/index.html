@@ -11,6 +11,7 @@
 		padding: 0;
 		background: rgb(50,50,50);
 		overflow: hidden;
+		font-family: "MS Trebuchet", sans-serif;
 	}
 	#color-picker {
 		text-align: center;
@@ -21,10 +22,14 @@
 	.color-picker canvas:active {
 		cursor: none;
 	}
+	h2 { text-align: center; }
+	a { color: rgb(200,200,200); text-decoration: none; }
+	a:hover { color: rgb(240,240,240); }
 	</style>
 </head>
 <body>
 	<div id="color-picker">Loading ball...</div>
+	<h2><a href="/dashboard.html" target="_blank">Go to dashboard</a></h2>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="/jquery.min.js"></script>
 	<script type="text/javascript" src="/color-picker.js"></script>
