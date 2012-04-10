@@ -1,0 +1,17 @@
+{
+  "author": "Sebastien Chopin <atinux@gmail.com> (https://twitter.com/Atinux)",
+  "name": "MultiBalls",
+  "description": "Real time Application",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Atinux/MultiBalls.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "express": ">=2.4.3",
+    "socket.io": ">=0.8.6"
+  }
+}
