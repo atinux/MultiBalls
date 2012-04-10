@@ -32,7 +32,7 @@
 		ball = null,
 		picker;
 	picker = new ui.ColorPicker;
-	picker.size(window.innerHeight);
+	picker.size(window.innerHeight / 2);
 	picker.on('change', function (color){
 		socket.emit('changeBallColor', ball.id, color.toString());
 	});
