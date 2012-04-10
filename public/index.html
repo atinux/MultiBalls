@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Control the ball</title>
+	<meta name="description" content="Démonstration de la librairie Socket.IO pour le Toulouse JS.">
+	<style type="text/css">
+	html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background: rgb(50,50,50);
+		overflow: hidden;
+	}
+	#color-picker {
+		text-align: center;
+		color: white;
+		font-size: 1.5em;
+	}
+	.color-picker canvas:active {
+		cursor: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="color-picker">Loading ball...</div>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/jquery.min.js"></script>
+	<script type="text/javascript" src="/color-picker.js"></script>
+	<script type="text/javascript">
+	var socket = io.connect(),
+		ball = null,
+		picker;
+	picker = new ui.ColorPicker;
+	picker.size(window.innerHeight);
+	picker.on('change', function (color){
+		socket.emit('changeBallColor', ball.id, color.toString());
+	});
+	// Sockets
+	socket.emit('createBall');
+	socket.on('ownBall', function (myBall) {
+    	$('#color-picker').html(picker.el);
+		ball = myBall;
+	});
+	</script>
+</body>
+</html>
