@@ -21,12 +21,12 @@ npm install -d
 node app.js
 </pre>
 
--> http://localhost:8080/ to access on remote
+**http://localhost:8080/** to access on remote
 
--> http://localhost:8080/dashboard.html to see all the balls connected
+**http://localhost:8080/dashboard.html** to see all the balls connected
 
 # Try it online
 
-## Dashboard: [http://multiballs.nodejitsu.com/dashboard.html](http://multiballs.nodejitsu.com/dashboard.html)
+### Dashboard: [http://multiballs.nodejitsu.com/dashboard.html](http://multiballs.nodejitsu.com/dashboard.html)
 
-## Remote: [http://multiballs.nodejitsu.com](http://multiballs.nodejitsu.com)
+### Remote: [http://multiballs.nodejitsu.com](http://multiballs.nodejitsu.com)
